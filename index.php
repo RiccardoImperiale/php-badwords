@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form action="./script.php" method="get" class="container w-50 mt-5">
+    <form action="./script.php" method="post" class="container w-50 mt-5">
         <div class="mb-3">
             <label for="paragraph" class="form-label">Paragraph:</label>
             <textarea name="paragraph" id="paragraph" class="form-control" rows="5" placeholder="Write a sentence..."></textarea>

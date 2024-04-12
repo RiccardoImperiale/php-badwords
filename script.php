@@ -1,6 +1,6 @@
 <?php
-$paragraph = $_GET['paragraph'];
-$wordToBeCensored = $_GET['word'];
+$paragraph = $_POST['paragraph'];
+$wordToBeCensored = $_POST['word'];
 $censoredParagraph = str_replace($wordToBeCensored, "***", $paragraph);
 ?>
 
