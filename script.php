@@ -20,7 +20,7 @@ $censoredParagraph = str_replace($wordToBeCensored, "***", $paragraph);
         <p class="fst-italic"><?= $paragraph ?></p>
         <h5 class="pt-3">Paragraph without the word <span class="text-danger">"<?= $wordToBeCensored ?>"</span>:</h5>
         <p class="fst-italic"><?= $censoredParagraph ?></p>
-        <h5>The paragraph it's now <span class="text-primary"><?= strlen($censoredParagraph) ?></span> characters long</h5>
+        <h5>The paragraph is now <span class="text-primary"><?= strlen($censoredParagraph) ?></span> characters long</h5>
     </div>
 
 </body>
