@@ -1,8 +1,6 @@
 <?php
-
-var_dump($_GET);
 $paragraph = $_GET['paragraph'];
-
+$wordToBeCensored = $_GET['word'];
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +15,10 @@ $paragraph = $_GET['paragraph'];
 
 <body>
     <div class="container mt-5">
-        <h3>The paragraph contains <?= strlen($paragraph) ?> characters</h3>
-        <p><?= $paragraph ?></p>
+        <h5>The paragraph contains <span class="text-primary"><?= strlen($paragraph) ?></span> characters</h5>
+        <p class="fst-italic"><?= $paragraph ?></p>
+        <h5 class="pt-3">Paragraph without the word <span class="text-danger">"<?= $wordToBeCensored ?>"</span>:</h5>
+        <p class="fst-italic"><?= str_replace($wordToBeCensored, "***", $paragraph) ?></p>
     </div>
 
 </body>
