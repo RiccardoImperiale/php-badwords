@@ -1,6 +1,7 @@
 <?php
 $paragraph = $_GET['paragraph'];
 $wordToBeCensored = $_GET['word'];
+$censoredParagraph = str_replace($wordToBeCensored, "***", $paragraph);
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +19,8 @@ $wordToBeCensored = $_GET['word'];
         <h5>The paragraph contains <span class="text-primary"><?= strlen($paragraph) ?></span> characters</h5>
         <p class="fst-italic"><?= $paragraph ?></p>
         <h5 class="pt-3">Paragraph without the word <span class="text-danger">"<?= $wordToBeCensored ?>"</span>:</h5>
-        <p class="fst-italic"><?= str_replace($wordToBeCensored, "***", $paragraph) ?></p>
+        <p class="fst-italic"><?= $censoredParagraph ?></p>
+        <h5>The paragraph it's now <span class="text-primary"><?= strlen($censoredParagraph) ?></span> characters long</h5>
     </div>
 
 </body>
